@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pub.orcid.org)",
+      "WebFetch(domain:orcid.org)",
+      "Bash(node --check D:/static_profolio/assets/js/app.js)",
+      "Bash(node --check D:/static_profolio/assets/js/publications.js)"
+    ]
+  }
+}
