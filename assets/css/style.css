@@ -421,7 +421,7 @@ p { margin: 0 0 1rem; }
 /* ============================================================
    SECTIONS
    ============================================================ */
-.section { padding: 5.5rem 0; background: transparent; content-visibility: auto; contain-intrinsic-size: 0 600px; }
+.section { padding: 5.5rem 0; background: transparent; }
 .section.alt { background: var(--bg-soft); }
 .section-container { position: relative; }
 .section-header { max-width: 680px; margin-bottom: 3rem; }
@@ -1048,6 +1048,7 @@ tr.publication-row:hover { background: rgba(37,99,235,0.03); }
 .project-modal__body {
     overflow-y: auto; flex: 1; padding: 1.75rem;
     scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 .project-modal__body::-webkit-scrollbar { width: 5px; }
 .project-modal__body::-webkit-scrollbar-track { background: transparent; }

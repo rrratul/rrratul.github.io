@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
 
     // ============================================================
+    //  SCROLL LOCK — iOS-safe: position:fixed preserves position
+    // ============================================================
+    let _scrollY = 0;
+    const lockScroll = () => {
+        _scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${_scrollY}px`;
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.overflow = 'hidden';
+    };
+    const unlockScroll = () => {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, _scrollY);
+    };
+
+    // ============================================================
     //  DETAIL REGISTRY — project & research case study data
     // ============================================================
     const detailRegistry = {
@@ -583,7 +604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeProjectViewer = () => {
         const v = ensureProjectViewer();
         v.modal.hidden = true;
-        document.body.style.overflow = '';
+        unlockScroll();
     };
 
     const openProjectViewer = key => {
@@ -605,7 +626,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         v.modal.hidden = false;
-        document.body.style.overflow = 'hidden';
+        lockScroll();
         v.modal.querySelector('.project-modal__close')?.focus();
     };
 
@@ -659,8 +680,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const v = ensureDocumentViewer();
         v.modal.hidden = true;
         v.frame.src = 'about:blank';
-        document.body.style.overflow = '';
+        unlockScroll();
     };
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isMobile = () => window.innerWidth <= 720;
 
     const openDocumentViewer = ({ href, title }) => {
         const v = ensureDocumentViewer();
@@ -670,6 +694,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         v.title.textContent = title;
         v.download.href = absoluteUrl;
+
+        // iOS Safari cannot display PDFs inside iframes — open directly instead
+        if (ext === 'pdf' && (isIOS || isMobile())) {
+            window.open(absoluteUrl, '_blank', 'noopener');
+            return;
+        }
+
         v.helper.textContent = ext === 'pdf'
             ? 'PDF preview — use Download to save a local copy.'
             : 'Presentation preview — if it does not render, use Download to open locally.';
@@ -684,7 +715,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         v.modal.hidden = false;
-        document.body.style.overflow = 'hidden';
+        lockScroll();
         v.modal.querySelector('.document-viewer__close')?.focus();
     };
 
@@ -947,13 +978,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (current < 0) current = 0;
             render(list);
             lb.hidden = false;
-            document.body.style.overflow = 'hidden';
+            lockScroll();
             lb.querySelector('.gallery-lightbox__close').focus();
         };
 
         const closeLb = () => {
             lb.hidden = true;
-            document.body.style.overflow = '';
+            unlockScroll();
         };
 
         const nav = (dir) => {
