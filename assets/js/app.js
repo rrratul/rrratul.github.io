@@ -340,29 +340,38 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         digidignity: {
             kicker: 'Project Case Study — Blockchain Olympiad 2025',
-            title: 'DigiDignity — AI-Integrated Blockchain Identity for Displaced Populations',
-            subtitle: 'National Finalist — Blockchain Olympiad Bangladesh 2025',
-            summary: 'DigiDignity is an AI-integrated blockchain identity framework designed to provide secure, portable, and tamper-proof digital IDs to displaced populations — refugees and stateless individuals who lack access to traditional identity infrastructure. The system combines decentralized blockchain records with ML-based biometric verification to establish trusted digital identities.',
+            title: 'DigiDignity — AI-Integrated Blockchain Identity System for Refugees',
+            subtitle: 'National Finalist — Blockchain Olympiad Bangladesh 2025 · Team Unchained',
+            summary: 'DigiDignity addresses the global identity crisis for displaced populations — 100M+ forcibly displaced people and 4.4M stateless individuals who cannot prove they exist. The system combines Self-Sovereign Identity (SSI), a dual-chain blockchain architecture, and AI-enhanced biometric verification (99.7% accuracy, 30-second verification) with Zero-Knowledge Proofs to provide secure, portable, and verifiable digital IDs that are free for refugees and sustainably funded through institutional partners.',
             meta: {
-                Role: 'Founding Member',
-                Focus: 'Blockchain, AI identity verification, social impact',
+                Role: 'Founding Member (Team Unchained)',
+                Focus: 'Blockchain SSI, AI biometrics, Zero-Knowledge Proofs, humanitarian tech',
                 Outcome: 'National Finalist — Blockchain Olympiad Bangladesh 2025',
-                Stack: 'Blockchain (smart contracts), AI/ML biometrics, decentralized identity'
+                Stack: 'Dual-Chain Blockchain, AI/ML Biometrics, ZKPs, Self-Sovereign Identity'
             },
             highlights: [
-                'Blockchain-anchored portable identity — no central authority required.',
-                'AI-powered biometric verification for identity establishment without documents.',
-                'Designed specifically for displaced persons, refugees, and stateless populations.',
-                'Smart contract-based access control for privacy-preserving ID sharing.',
-                'National Finalist at Blockchain Olympiad Bangladesh 2025.'
+                'Self-Sovereign Identity (SSI): individuals own and control their own identity data — no central authority required.',
+                'Dual-chain architecture (private + public blockchain) for enhanced security and tamper-proof record keeping.',
+                'AI-enhanced biometric verification achieving 99.7% accuracy with 30-second identity checks.',
+                'Zero-Knowledge Proofs (ZKPs) for privacy-preserving verification — prove identity without revealing personal data.',
+                'Free for refugees; sustainably funded via micro-commissions from banks, healthcare providers, and universities.',
+                'Cross-border portability targeting 88.3M forcibly displaced and stateless persons across Africa, Europe, Asia, and the Americas.',
+                'Market opportunity: $1.5B TAM, $44M SAM, $10M SOM annually based on UNHCR and World Bank data.',
+                'National Finalist — Blockchain Olympiad Bangladesh 2025.'
             ],
             slides: [
-                { label: 'National Finalist', src: null, icon: '🏆', caption: 'National Finalist certificate — Blockchain Olympiad Bangladesh 2025. (Add certificate image here.)' },
-                { label: 'System Architecture', src: null, icon: '⛓️', caption: 'DigiDignity blockchain identity architecture and AI verification pipeline.' },
-                { label: 'Use Case — Displaced Populations', src: null, icon: '🌍', caption: 'Real-world use case: portable blockchain IDs for displaced persons and refugees.' },
-                { label: 'Presentation Slides', src: null, icon: '📊', caption: 'Blockchain Olympiad competition slides. (Add slide image here.)' }
+                { label: 'The Problem — "I Don\'t Exist"', src: null, icon: '🌍', caption: 'Maya, 12 — born in Dadaab Refugee Camp, Kenya, with no birth certificate. 4.4M stateless individuals worldwide live without legal nationality, locked out of education, healthcare, and employment.' },
+                { label: 'Maya\'s Impossible Journey', src: null, icon: '📖', caption: 'Age 6: School denied (no documents). Age 8: Mother dies — medical verification took 3 weeks. Age 10: Border crossing — previous camp ID invalid. Age 11: Lost in system, no services, no future.' },
+                { label: 'Core Components', src: null, icon: '⛓️', caption: 'Five pillars: Self-Sovereign Identity (SSI), Dual-Chain Architecture, AI-Enhanced Verification (99.7% accuracy), Zero-Knowledge Proofs (ZKPs), and Cross-Border Portability.' },
+                { label: 'Primary Actors', src: null, icon: '🤝', caption: 'Serves refugees & stateless populations (free), governments & UN agencies, NGOs, financial institutions, healthcare providers, and education providers.' },
+                { label: 'Market Size (TAM · SAM · SOM)', src: null, icon: '📈', caption: 'TAM: $1.5B (1.5B people lack official ID). SAM: $44M (88.3M displaced/stateless in key regions). SOM: $10M annually (10% early-adoption pilot via UNHCR & WFP partners).' },
+                { label: 'Business Model Canvas', src: null, icon: '💼', caption: 'Revenue from financial micro-commissions (0.1–0.3%), healthcare verification fees (0.2–0.4%), credential verification (0.3–0.5%), and anonymous analytics — covering 80–100% of operating costs while keeping the service free for refugees.' },
+                { label: 'Risk & Mitigation', src: null, icon: '🛡️', caption: 'Four key risks addressed: Technological Accessibility → Privacy-Preserving Architecture; Financial Sustainability → Diversified Revenue Model; Operational Adoption → Multi-stakeholder Governance; AI Bias → Fairness & Accountability framework.' },
+                { label: 'Full Presentation Slides (PDF)', src: null, icon: '📄', caption: 'Click "View Slides" below to open the complete Blockchain Olympiad 2025 competition deck (15 slides).' }
             ],
-            links: []
+            links: [
+                { label: 'View Slides (PDF)', href: 'assets/img/DigiDignity_presentation_sildes.pdf' }
+            ]
         }
     };
 
