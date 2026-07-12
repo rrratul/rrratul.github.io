@@ -338,31 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: 'DOI', href: 'https://doi.org/10.6084/m9.figshare.31878643' }
             ]
         },
-        'lung-cancer-llm': {
-            kicker: 'Research Proposal',
-            title: 'Multi-Agent LLM Chatbot for Lung Cancer Screening in Rural Bangladesh',
-            subtitle: 'UIU Institute for Advanced Research (IAR) — Research Assistant Proposal 2026',
-            summary: 'Proposed research system using a multi-agent large language model architecture to support early lung cancer screening access in rural healthcare settings across Bangladesh, where specialist access is severely limited. Each agent handles a specialized task in the screening workflow.',
-            meta: {
-                Role: 'Research Proposer',
-                Focus: 'LLMs, healthcare access, rural health, multi-agent systems',
-                Outcome: 'Research Assistant proposal — UIU IAR',
-                Stack: 'Multi-agent LLMs, conversational AI, healthcare NLP'
-            },
-            highlights: [
-                'Addresses critical gap in rural lung cancer screening access in Bangladesh.',
-                'Multi-agent design: triage agent, symptom elicitation, referral recommendation.',
-                'LLM-based dialogue in Bengali and English for rural patient accessibility.',
-                'Connects AI decision support to existing rural healthcare infrastructure.',
-                'Submitted as UIU Institute for Advanced Research (IAR) RA proposal.'
-            ],
-            slides: [
-                { label: 'Proposal Overview', src: null, icon: '🏥', caption: 'Multi-agent LLM chatbot system overview and use case.' },
-                { label: 'Agent Architecture', src: null, icon: '🤖', caption: 'Agent workflow: triage → symptom elicitation → referral.' },
-                { label: 'Rural Health Context', src: null, icon: '🌍', caption: 'Healthcare access context and motivation in rural Bangladesh.' }
-            ],
-            links: []
-        },
         digidignity: {
             kicker: 'Project Case Study — Blockchain Olympiad 2025',
             title: 'DigiDignity — AI-Integrated Blockchain Identity for Displaced Populations',

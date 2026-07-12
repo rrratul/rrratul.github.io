@@ -1046,7 +1046,7 @@ tr.publication-row:hover { background: rgba(37,99,235,0.03); }
 }
 
 .project-modal__body {
-    overflow-y: auto; flex: 1; padding: 1.75rem;
+    overflow-y: auto; flex: 1 1 0; min-height: 0; padding: 1.75rem;
     scroll-behavior: smooth; -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
 }
@@ -1331,7 +1331,7 @@ tr.publication-row:hover { background: rgba(37,99,235,0.03); }
     }
     .project-modal__panel, .document-viewer__panel {
         border-radius: var(--r-lg) var(--r-lg) 0 0;
-        max-height: 94vh; width: 100%;
+        height: 94vh; max-height: 94vh; width: 100%;
     }
     .project-modal__body { padding: 1.1rem 1rem; }
     .project-modal__topbar, .document-viewer__header {
@@ -1411,7 +1411,6 @@ tr.publication-row:hover { background: rgba(37,99,235,0.03); }
 /* iOS Safari: dvh accounts for browser chrome that vh ignores */
 @supports (height: 100dvh) {
     @media (max-width: 720px) {
-        .project-modal__panel, .document-viewer__panel { max-height: 94dvh; }
-        .document-viewer__panel { height: 94dvh; }
+        .project-modal__panel, .document-viewer__panel { height: 94dvh; max-height: 94dvh; }
     }
 }
